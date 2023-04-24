@@ -1,0 +1,154 @@
+body {
+  background: #282c34;
+}
+.main-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+}
+.side-nav li {
+  list-style: none;
+  padding: 15px 10px;
+  margin: 10px 0;
+  color: aqua;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 15px;
+}
+.side-nav li:hover {
+  box-shadow: 0px 4px 10px 2px;
+}
+.title,
+.box {
+  border-bottom: 1px solid rgba(177, 171, 171, 0.5);
+  width: 100%;
+}
+.box div,
+.title div {
+  padding: 15px 10px;
+  border-right: 1px solid rgba(177, 171, 171, 0.5);
+}
+.title div {
+  font-weight: bold;
+}
+.side-nav li:hover {
+  cursor: pointer;
+}
+
+.row {
+  width: 100%;
+}
+.new {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 15px 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color: aqua;
+  border: none;
+  background-color: transparent;
+}
+.new:hover {
+  box-shadow: 0px 4px 10px 2px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  margin: 15px;
+}
+
+.newtask-box {
+  width: 85%;
+}
+
+.overlay {
+  transform: translateY(-23px);
+  display: flex;
+  position: absolute;
+  color: red;
+}
+.overlay span:nth-child(1) {
+  color: rgb(10, 180, 16);
+}
+
+.overlay span {
+  margin: 0 5px;
+}
+.overlay span:hover {
+  cursor: pointer;
+}
+
+.col1 {
+  position: relative;
+  width: 75%;
+  padding: 0 10px;
+  margin: 30px auto;
+}
+.col1 .inputBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+.col1 .inputBox input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 0 10px;
+  z-index: 1;
+  color: aqua;
+}
+.col1 .inputBox .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.col1 .inputBox input:focus + .text,
+.col1 .inputBox input:valid + .text,
+.col1 .inputBox textarea:focus + .text,
+.col1 .inputBox textarea:valid + .text {
+  top: -35px;
+  left: 10px;
+}
+.col1 .inputBox .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: black;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.col1 .inputBox input:focus ~ .line,
+.col1 .inputBox input:valid ~ .line {
+  height: 100%;
+}
+.container1 {
+  display: flex;
+  align-items: center;
+}
+.calendar {
+  height: 40px;
+  background: #454040;
+  color: white;
+}
+.calendar::selected{
+  background: transparent;
+}

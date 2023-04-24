@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  width: 100%;
+  background: #001923;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(#9b8d14, #6f0026);
+  border-radius: 50%;
+  transform: translate(-420px, -100px);
+  animation: move 10s linear infinite;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(#18232c, #026d9e);
+  border-radius: 50%;
+  transform: translate(400px, 110px);
+  animation: move2 10s linear infinite;
+}
+@keyframes move {
+  0% {
+    transform: translate(-420px, -100px);
+  }
+  50% {
+    transform: translate(-320px, -50px);
+  }
+  100% {
+    transform: translate(-420px, -100px);
+  }
+  
+}
+@keyframes move2 {
+  0% {
+    transform: translate(400px, 110px);
+  }
+  50% {
+    transform: translate(300px, 160px);
+  }
+  100% {
+    transform: translate(400px, 110px);
+  }
+  
+}
+.innerBox {
+  position: relative;
+  z-index: 1000;
+  width: 50%;
+  max-width: 1000px;
+  padding: 50px;
+  box-shadow: 0 25px 45px rgb(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(25px);
+}
+.innerBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  transform: skewX(-15deg);
+}
+.innerBox h1{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.footer .error {
+  font-weight: bold;
+  font: 0.85rem;
+  color: #ff3300;
+  text-align: center;
+}
+.footer button {
+  outline: none;
+  border: none;
+  background-color: #1e8337;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 16px;
+  width: 100%;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.footer button:hover {
+  background-color: #0d5319;
+  box-shadow: 0px 0px 5px 3px #0d5319;
+}
+.footer button:disabled {
+  background-color: gray;
+}
+.footer p {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.footer p a {
+  color: #ff0088;
+  text-decoration: none;
+}
