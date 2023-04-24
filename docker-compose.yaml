@@ -1,7 +1,7 @@
 version: "3"
 services:
-  client:
+  frontend:
     container_name: todo-app-container
     build: ./
     ports:
-      - "3000:3000"
+      - "3000:3000"
