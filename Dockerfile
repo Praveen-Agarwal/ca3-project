@@ -1,8 +1,6 @@
 FROM node:18.12.0-alpine
 WORKDIR /todo-app
-COPY ./package.json ./
-COPY ./package-lock.json ./
+ENV PATH="./node_modules/.bin:$PATH"
 COPY . .
-EXPOSE 3000
-RUN npm install
+RUN npm run build
 CMD ["npm","start"]
