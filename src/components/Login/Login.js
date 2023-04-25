@@ -45,7 +45,7 @@ export default function Login() {
         </div>
         <div className={styles.footer}>
           <p className={styles.error}>{errorMsg}</p>
-          <button onClick={handleSubmission} disabled={submitBtnDisabled}>Log In</button>
+          <button onClick={handleSubmission} disabled={submitBtnDisabled}> In</button>
           <p>Don't have an account? {" "}
             <span>
               <Link to="/signup">Sign Up</Link>
