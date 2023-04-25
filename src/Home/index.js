@@ -15,7 +15,7 @@ export default function Home(props) {
   })
   return (
     <div id='main'>
-      <Navbar appName={'ToDoList2.0'} name={props.name} email={props.email} signout={props.signout}/>
+      <Navbar appName={'ToDoList'} name={props.name} email={props.email} signout={props.signout}/>
     <header>
       <div className="row">
         <div className="col-md-2" style={{borderRight:'1px solid rgba(177, 171, 171, 0.5)',height:'100vh'}}>
