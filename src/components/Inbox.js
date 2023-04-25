@@ -9,7 +9,7 @@ export default function Inbox(props) {
     }
     return (
         <>
-            {!newTask && (<button className='new' onClick={newtaskHandler}><span className="material-symbols-outlined">edit</span> Create Task</button>)}
+            {!newTask && (<button className='new' onClick={newtaskHandler}><span className="material-symbols-outlined">edit</span> Create a Task</button>)}
             {newTask && <CreateList list={props.list} append={props.append} setNewTask={setNewTask} />}
             <ListRenderer list={props.list} delete={props.delete} />
         </>
